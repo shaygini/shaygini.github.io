@@ -1,0 +1,81 @@
+[ 
+  {
+    "relation": [
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "web",
+      "site": "https://www.codere.mx"
+    }
+  },
+  {
+      "relation" : [
+        "delegate_permission/common.handle_all_urls",
+        "delegate_permission/common.get_login_creds"
+      ],
+      "target" : {
+        "namespace" : "android_app",
+        "package_name" : "mx.codere.casino",
+        "sha256_cert_fingerprints" : [
+          "C8:FE:75:22:79:5C:0C:68:DD:15:5B:CE:6F:9C:79:A5:3B:F9:0E:67:55:62:B1:55:C8:2C:6F:C0:10:B7:75:1D",
+          "2E:46:4C:70:55:4B:4E:85:19:86:37:F3:FF:8B:01:EF:90:B5:5B:19:19:D1:8B:27:82:9C:22:E1:4C:C7:60:B1"
+        ]
+      }
+    },
+    {
+        "relation" : [
+          "delegate_permission/common.handle_all_urls",
+          "delegate_permission/common.get_login_creds"
+        ],
+        "target" : {
+          "namespace" : "android_app",
+          "package_name" : "mx.codere.casino.stg",
+          "sha256_cert_fingerprints" : [
+            "C8:FE:75:22:79:5C:0C:68:DD:15:5B:CE:6F:9C:79:A5:3B:F9:0E:67:55:62:B1:55:C8:2C:6F:C0:10:B7:75:1D",
+            "2E:46:4C:70:55:4B:4E:85:19:86:37:F3:FF:8B:01:EF:90:B5:5B:19:19:D1:8B:27:82:9C:22:E1:4C:C7:60:B1"
+          ]
+        }
+      },
+      {
+        "relation" : [
+          "delegate_permission/common.handle_all_urls",
+          "delegate_permission/common.get_login_creds"
+        ],
+        "target" : {
+          "namespace" : "android_app",
+          "package_name" : "mx.codere.casino.tst",
+          "sha256_cert_fingerprints" : [
+            "C8:FE:75:22:79:5C:0C:68:DD:15:5B:CE:6F:9C:79:A5:3B:F9:0E:67:55:62:B1:55:C8:2C:6F:C0:10:B7:75:1D",
+            "2E:46:4C:70:55:4B:4E:85:19:86:37:F3:FF:8B:01:EF:90:B5:5B:19:19:D1:8B:27:82:9C:22:E1:4C:C7:60:B1"
+          ]
+        }
+      },
+      {
+        "relation" : [
+          "delegate_permission/common.handle_all_urls",
+          "delegate_permission/common.get_login_creds"
+        ],
+        "target" : {
+          "namespace" : "android_app",
+          "package_name" : "mx.codere.apuestas",
+          "sha256_cert_fingerprints" : [
+            "D0:AF:47:7A:87:43:6C:0F:22:32:FC:11:D1:72:7A:F7:30:E4:50:73:F9:DF:9D:2F:DA:20:10:B9:0A:D1:AC:F0",
+            "2E:12:95:58:89:DD:B6:68:9E:57:7A:9D:BB:91:FE:B3:35:98:9F:48:88:85:25:41:C5:03:47:04:03:6E:3E:6E"
+          ]
+        }
+      },
+      {
+        "relation" : [
+          "delegate_permission/common.handle_all_urls",
+          "delegate_permission/common.get_login_creds"
+        ],
+        "target" : {
+          "namespace" : "android_app",
+          "package_name" : "mx.codere.apuestas.stg",
+          "sha256_cert_fingerprints" : [
+            "D0:AF:47:7A:87:43:6C:0F:22:32:FC:11:D1:72:7A:F7:30:E4:50:73:F9:DF:9D:2F:DA:20:10:B9:0A:D1:AC:F0",
+            "2E:12:95:58:89:DD:B6:68:9E:57:7A:9D:BB:91:FE:B3:35:98:9F:48:88:85:25:41:C5:03:47:04:03:6E:3E:6E"
+          ]
+        }
+      }
+  ]
