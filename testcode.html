@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Token Generator</h2>
+    <label for="timeInput">Enter Time (HH:MM) or leave blank for current time:</label>
+    <input type="text" id="timeInput" placeholder="HH:MM">
+    <button onclick="generateToken()">Generate Token</button>
+    <h3>Generated Token: <span id="tokenOutput">----</span></h3>
+
+    <script>
+        function generateToken() {
+            let timeInput = document.getElementById("timeInput").value;
+            let currentTime;
+            
+            if (timeInput) {
+                let parts = timeInput.split(":");
+                if (parts.length !== 2 || isNaN(parts[0]) || isNaN(parts[1])) {
+                    alert("Please enter a valid time in HH:MM format.");
+                    return;
+                }
+                currentTime = { hours: parseInt(parts[0]), minutes: parseInt(parts[1]) };
+            } else {
+                let now = new Date();
+                currentTime = { hours: now.getHours(), minutes: now.getMinutes() };
+            }
+
+            let tensOfMinutes = Math.floor(currentTime.minutes / 10);
+            let token = (((currentTime.hours * 53) + (tensOfMinutes * 17) + 619) % 10000);
+            let generatedCode = token.toString().padStart(4, '0');
+            
+            document.getElementById("tokenOutput").textContent = generatedCode;
+        }
+    </script>
+</body>
+</html>
